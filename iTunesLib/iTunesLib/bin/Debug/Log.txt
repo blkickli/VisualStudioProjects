@@ -1,0 +1,39 @@
+======================================================================
+1/1/2015 8:29:44 PM BEGIN
+1/1/2015 8:29:44 PM Connecting to iTunes
+1/1/2015 8:30:03 PM Populating music library data set
+1/1/2015 8:30:15 PM Writing library data set to Library.xml
+1/1/2015 8:30:16 PM Writing library schema to LibraryDataSet.xsd
+Total Stats
+Num Tracks = 15942
+Duration = 4158582 (s)  48.03:09:42 (d.hh:mm:ss)
+
+Genre Stats
+Num Genres = 16
+Genre        # Albums # Tracks Duration (s) Duration (d.hh:mm:ss)
+------------ -------- -------- ------------ ---------------------
+Audio Book         26      606       108818            1.06:13:38
+Children's          1       10         2254            0.00:37:34
+Christmas         150     2078       448870            5.04:41:10
+Classical          53      727       186295            2.03:44:55
+Comedy              6       83        18587            0.05:09:47
+Country             3       41         9645            0.02:40:45
+Folk                4       41        10394            0.02:53:14
+Girl Scouts         4      119        13355            0.03:42:35
+Halloween           8       66        22178            0.06:09:38
+Jazz              193     1993       608883            7.01:08:03
+Latin               1       15         4015            0.01:06:55
+New Age           193     2291       588355            6.19:25:55
+Pop Vocal           1       18         3396            0.00:56:36
+Religious          17      211        54758            0.15:12:38
+Rock              572     6594      1858714           21.12:18:34
+Soundtrack         65     1049       220065            2.13:07:45
+
+Album Artist Stats
+Num Album Artists = 332
+
+Album Stats
+Num Albums = 1297
+
+1/1/2015 8:30:16 PM END
+======================================================================

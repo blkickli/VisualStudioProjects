@@ -1,0 +1,7 @@
+C:\Users\Brad\Documents\Programming\iTunesLib\iTunesLib\bin\Debug\iTunesLib.exe.config
+C:\Users\Brad\Documents\Programming\iTunesLib\iTunesLib\bin\Debug\iTunesLib.exe
+C:\Users\Brad\Documents\Programming\iTunesLib\iTunesLib\bin\Debug\iTunesLib.pdb
+C:\Users\Brad\Documents\Programming\iTunesLib\iTunesLib\obj\x86\Debug\Interop.iTunesLib.dll
+C:\Users\Brad\Documents\Programming\iTunesLib\iTunesLib\obj\x86\Debug\iTunesLib.csproj.ResolveComReference.cache
+C:\Users\Brad\Documents\Programming\iTunesLib\iTunesLib\obj\x86\Debug\iTunesLib.exe
+C:\Users\Brad\Documents\Programming\iTunesLib\iTunesLib\obj\x86\Debug\iTunesLib.pdb

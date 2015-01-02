@@ -1,0 +1,155 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="LibraryDataSet" targetNamespace="http://smaug/schemas/LibraryDataSet.xsd" xmlns:mstns="http://smaug/schemas/LibraryDataSet.xsd" xmlns="http://smaug/schemas/LibraryDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="LibraryDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Genre">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" type="xs:string" />
+              <xs:element name="numAlbums" type="xs:int" minOccurs="0" />
+              <xs:element name="numTracks" type="xs:int" minOccurs="0" />
+              <xs:element name="totalDuration" type="xs:double" minOccurs="0" />
+              <xs:element name="shortName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AlbumArtist">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" type="xs:string" />
+              <xs:element name="numAlbums" type="xs:int" minOccurs="0" />
+              <xs:element name="numTracks" type="xs:int" minOccurs="0" />
+              <xs:element name="totalDuration" type="xs:double" minOccurs="0" />
+              <xs:element name="shortName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Album">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="genre" type="xs:string" minOccurs="0" />
+              <xs:element name="albumArtist" type="xs:string" />
+              <xs:element name="title" type="xs:string" />
+              <xs:element name="year" type="xs:short" minOccurs="0" />
+              <xs:element name="numTracks" type="xs:int" minOccurs="0" />
+              <xs:element name="totalDuration" type="xs:double" minOccurs="0" />
+              <xs:element name="shortName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Track">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="albumArtist" type="xs:string" />
+              <xs:element name="album" type="xs:string" />
+              <xs:element name="trackNumber" type="xs:short" />
+              <xs:element name="title" type="xs:string" minOccurs="0" />
+              <xs:element name="composer" type="xs:string" minOccurs="0" />
+              <xs:element name="conductor" type="xs:string" minOccurs="0" />
+              <xs:element name="duration" type="xs:double" minOccurs="0" />
+              <xs:element name="sourceURL" type="xs:string" minOccurs="0" />
+              <xs:element name="lastPlayedDateTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="playCount" type="xs:short" minOccurs="0" />
+              <xs:element name="bitrate" type="xs:int" minOccurs="0" />
+              <xs:element name="addedToLibDateTime" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PlaylistFile">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" type="xs:string" />
+              <xs:element name="sourceURL" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PlaylistFileTrack">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="playlistName" type="xs:string" />
+              <xs:element name="albumArtist" type="xs:string" />
+              <xs:element name="album" type="xs:string" />
+              <xs:element name="trackNumber" type="xs:short" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ComputerName">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LibrarySource">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Genre" />
+      <xs:field xpath="mstns:name" />
+    </xs:unique>
+    <xs:unique name="AlbumArtist_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AlbumArtist" />
+      <xs:field xpath="mstns:name" />
+    </xs:unique>
+    <xs:unique name="AlbumKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Album" />
+      <xs:field xpath="mstns:albumArtist" />
+      <xs:field xpath="mstns:title" />
+    </xs:unique>
+    <xs:unique name="TrackKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Track" />
+      <xs:field xpath="mstns:albumArtist" />
+      <xs:field xpath="mstns:album" />
+      <xs:field xpath="mstns:trackNumber" />
+    </xs:unique>
+    <xs:unique name="PlaylistFile_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PlaylistFile" />
+      <xs:field xpath="mstns:name" />
+    </xs:unique>
+    <xs:unique name="PlaylistFileTrack_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PlaylistFileTrack" />
+      <xs:field xpath="mstns:playlistName" />
+      <xs:field xpath="mstns:albumArtist" />
+      <xs:field xpath="mstns:album" />
+      <xs:field xpath="mstns:trackNumber" />
+    </xs:unique>
+    <xs:unique name="ComputerName_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ComputerName" />
+      <xs:field xpath="mstns:Name" />
+    </xs:unique>
+    <xs:unique name="LibrarySource_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LibrarySource" />
+      <xs:field xpath="mstns:Name" />
+    </xs:unique>
+    <xs:keyref name="FK_Track_PlaylistTrack" refer="TrackKey1">
+      <xs:selector xpath=".//mstns:PlaylistFileTrack" />
+      <xs:field xpath="mstns:albumArtist" />
+      <xs:field xpath="mstns:album" />
+      <xs:field xpath="mstns:trackNumber" />
+    </xs:keyref>
+    <xs:keyref name="FK_Playlist_PlaylistTracks" refer="PlaylistFile_Constraint1">
+      <xs:selector xpath=".//mstns:PlaylistFileTrack" />
+      <xs:field xpath="mstns:playlistName" />
+    </xs:keyref>
+    <xs:keyref name="FK_Album_Track" refer="AlbumKey1">
+      <xs:selector xpath=".//mstns:Track" />
+      <xs:field xpath="mstns:albumArtist" />
+      <xs:field xpath="mstns:album" />
+    </xs:keyref>
+    <xs:keyref name="FK_AlbumArtist_Album" refer="AlbumArtist_Constraint1">
+      <xs:selector xpath=".//mstns:Album" />
+      <xs:field xpath="mstns:albumArtist" />
+    </xs:keyref>
+    <xs:keyref name="FK_Genre_Album" refer="Constraint1">
+      <xs:selector xpath=".//mstns:Album" />
+      <xs:field xpath="mstns:genre" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>
